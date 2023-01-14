@@ -13,7 +13,6 @@
   height: 64px;
 }
 .btn-secondary {
-  margin-left: 30px;
   color: #fd6e0a;
   background: transparent;
   font-weight: 700;
@@ -84,7 +83,10 @@ nav li {
   font-size: 18px;
   margin-bottom: 30px;
 }
-
+.btn-container {
+  display: flex;
+  gap: 30px;
+}
 /* main section */
 main {
   max-width: 1140px;
@@ -260,10 +262,6 @@ i {
 
 /* Responsive Style */
 @media screen and (max-width: 576px) {
-  .btn-secondary {
-    margin-left: 0px;
-    margin-top: 30px;
-  }
   .header {
     background-image: none;
   }
@@ -296,7 +294,9 @@ i {
   .banner {
     margin: 0 20px;
   }
-
+  .btn-container {
+    flex-direction: column;
+  }
   .contact input[type="text"],
   input[type="email"],
   textarea {
@@ -340,5 +340,11 @@ i {
   input[type="email"],
   textarea {
     padding: 0 0 0 5px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1416px) {
+  .btn-container {
+    flex-direction: column;
   }
 }
